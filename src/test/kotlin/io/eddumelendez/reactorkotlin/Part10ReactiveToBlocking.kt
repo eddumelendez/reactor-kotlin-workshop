@@ -22,7 +22,7 @@ class Part10ReactiveToBlocking {
 
     // TODO Return the user contained in that Mono
     fun monoToValue(mono: Mono<User>): User {
-        return null!!
+        return mono.block()
     }
 
     @Test
@@ -39,7 +39,7 @@ class Part10ReactiveToBlocking {
 
     // TODO Return the users contained in that Flux
     fun fluxToValues(flux: Flux<User>): Iterable<User> {
-        return null!!
+        return flux.toIterable()
     }
 
 }
