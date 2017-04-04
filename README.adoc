@@ -1,0 +1,6 @@
+= Lite Reactor API and Reactor Kotlin Extensions Hands-on
+
+This Hands-on helps you to learn about https://github.com/reactor/reactor-core/[Project Reactor^] and https://github.com/reactor/reactor-kotlin-extensions/[Reactor Kotlin Extensions^].
+It is based on https://github.com/reactor/lite-rx-api-hands-on[lite-rx-api-hands-on^] which is the Java version.
+
+The solution is available in the `complete` branch.
