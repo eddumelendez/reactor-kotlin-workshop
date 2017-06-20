@@ -27,7 +27,7 @@ class Part07Errors {
 
     // TODO Return a Mono<User> containing User.SAUL when an error occurs in the input Mono, else do not change the input Mono.
     fun betterCallSaulForBogusMono(mono: Mono<User>): Mono<User> {
-        return mono.otherwise({ User.SAUL.toMono() })
+        return mono.onErrorResume({ User.SAUL.toMono() })
     }
 
     @Test
@@ -45,7 +45,7 @@ class Part07Errors {
 
     // TODO Return a Flux<User> containing User.SAUL and User.JESSE when an error occurs in the input Flux, else do not change the input Flux.
     fun betterCallSaulAndJesseForBogusFlux(flux: Flux<User>): Flux<User> {
-        return flux.onErrorResumeWith({ Flux.just(User.SAUL, User.JESSE) })
+        return flux.onErrorResume({ Flux.just(User.SAUL, User.JESSE) })
     }
 
     @Test
