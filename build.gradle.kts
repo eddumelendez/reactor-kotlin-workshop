@@ -6,7 +6,7 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion")
+        classpath(kotlinModule("gradle-plugin", kotlinVersion))
     }
 }
 
@@ -24,7 +24,7 @@ repositories {
 val kotlinVersion = extra["kotlinVersion"] as String
 
 dependencies {
-    compile("org.jetbrains.kotlin:kotlin-stdlib-jre8:$kotlinVersion")
+    compile(kotlinModule("stdlib-jre8", kotlinVersion))
     compile("io.projectreactor:reactor-kotlin-extensions:1.0.0.M2") {
         exclude("io.projectreactor", "reactor-core")
     }
