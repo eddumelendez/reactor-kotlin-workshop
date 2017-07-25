@@ -1,7 +1,7 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 buildscript {
-    val kotlinVersion = "1.1.2-5"
+    val kotlinVersion = "1.1.3-2"
     extra["kotlinVersion"] = kotlinVersion
 
     repositories {
