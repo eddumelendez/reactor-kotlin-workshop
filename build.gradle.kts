@@ -1,3 +1,5 @@
+import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+
 buildscript {
     val kotlinVersion = "1.1.2-5"
     extra["kotlinVersion"] = kotlinVersion
@@ -18,6 +20,12 @@ repositories {
     mavenCentral()
     maven {
         setUrl("https://repo.spring.io/milestone")
+    }
+}
+
+tasks.withType<KotlinCompile> {
+    kotlinOptions {
+        jvmTarget = "1.8"
     }
 }
 
