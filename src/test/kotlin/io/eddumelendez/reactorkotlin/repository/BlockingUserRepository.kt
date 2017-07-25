@@ -31,7 +31,7 @@ class BlockingUserRepository : BlockingRepository<User> {
         reactiveRepository.save(value.toMono()).block()
     }
 
-    override fun findFirst(): User {
+    override fun findFirst(): User? {
         callCount++
         return reactiveRepository.findFirst().block()
     }
@@ -41,7 +41,7 @@ class BlockingUserRepository : BlockingRepository<User> {
         return reactiveRepository.findAll().toIterable()
     }
 
-    override fun findById(id: String): User {
+    override fun findById(id: String): User? {
         callCount++
         return reactiveRepository.findById(id).block()
     }

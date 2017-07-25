@@ -4,9 +4,9 @@ import io.eddumelendez.reactorkotlin.domain.User
 import org.junit.Test
 import reactor.core.publisher.Flux
 import reactor.core.publisher.Mono
-import reactor.core.publisher.test
 import reactor.core.publisher.toFlux
 import reactor.core.publisher.toMono
+import reactor.test.test
 
 class Part07Errors {
 
@@ -68,6 +68,6 @@ class Part07Errors {
         return User(user.username, user.firstname, user.lastname)
     }
 
-    class GetOutOfHereException: Exception()
+    class GetOutOfHereException : Exception()
 
 }
