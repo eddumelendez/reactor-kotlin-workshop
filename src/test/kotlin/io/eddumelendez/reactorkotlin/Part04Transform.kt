@@ -5,8 +5,8 @@ import io.eddumelendez.reactorkotlin.repository.ReactiveUserRepository
 import org.junit.Test
 import reactor.core.publisher.Flux
 import reactor.core.publisher.Mono
-import reactor.core.publisher.test
 import reactor.core.publisher.toMono
+import reactor.test.test
 
 class Part04Transform {
 
