@@ -9,7 +9,7 @@ import io.reactivex.Single
 import org.junit.Test
 import reactor.core.publisher.Flux
 import reactor.core.publisher.Mono
-import reactor.core.publisher.test
+import reactor.test.test
 import java.util.concurrent.CompletableFuture
 
 class Part09Adapt {

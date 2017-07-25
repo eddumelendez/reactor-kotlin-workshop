@@ -9,9 +9,9 @@ import org.junit.Assert.assertFalse
 import org.junit.Test
 import reactor.core.publisher.Flux
 import reactor.core.publisher.Mono
-import reactor.core.publisher.test
 import reactor.core.publisher.toFlux
 import reactor.core.scheduler.Schedulers
+import reactor.test.test
 
 class Part11BlockingToReactive {
 

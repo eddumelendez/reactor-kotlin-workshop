@@ -21,7 +21,7 @@ class Part10ReactiveToBlocking {
     }
 
     // TODO Return the user contained in that Mono
-    fun monoToValue(mono: Mono<User>): User {
+    fun monoToValue(mono: Mono<User>): User? {
         return mono.block()
     }
 

@@ -2,8 +2,8 @@ package io.eddumelendez.reactorkotlin
 
 import org.junit.Test
 import reactor.core.publisher.Mono
-import reactor.core.publisher.test
 import reactor.core.publisher.toMono
+import reactor.test.test
 import java.time.Duration
 
 class Part02Mono {

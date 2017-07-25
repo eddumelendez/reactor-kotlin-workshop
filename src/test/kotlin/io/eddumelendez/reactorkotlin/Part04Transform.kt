@@ -5,8 +5,8 @@ import io.eddumelendez.reactorkotlin.repository.ReactiveUserRepository
 import org.junit.Test
 import reactor.core.publisher.Flux
 import reactor.core.publisher.Mono
-import reactor.core.publisher.test
 import reactor.core.publisher.toMono
+import reactor.test.test
 
 class Part04Transform {
 
@@ -41,7 +41,7 @@ class Part04Transform {
 
     // TODO Capitalize the users username, firstName and lastName
     fun capitalizeMany(flux: Flux<User>): Flux<User> {
-        return flux.map({ u -> User(u.username.toUpperCase(), u.firstname?.toUpperCase(), u.lastname?.toUpperCase())})
+        return flux.map({ u -> User(u.username.toUpperCase(), u.firstname?.toUpperCase(), u.lastname?.toUpperCase()) })
     }
 
     @Test

@@ -4,8 +4,8 @@ import io.eddumelendez.reactorkotlin.domain.User
 import io.eddumelendez.reactorkotlin.repository.ReactiveUserRepository
 import org.junit.Test
 import reactor.core.publisher.Flux
-import reactor.core.publisher.test
 import reactor.test.StepVerifier
+import reactor.test.test
 
 class Part06Request {
 
