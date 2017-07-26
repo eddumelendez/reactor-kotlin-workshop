@@ -50,7 +50,7 @@ class Part11BlockingToReactive {
     // TODO Insert users contained in the Flux parameter in the blocking repository using an parallel scheduler and return a Mono<Void> that signal the end of the operation
     fun fluxToBlockingRepository(flux: Flux<User>, repository: BlockingRepository<User>): Mono<Void> {
         return flux.publishOn(Schedulers.elastic())
-                .doOnNext({ u -> repository.save(u) })
+                .doOnNext({ repository.save(it) })
                 .then()
     }
 

@@ -44,8 +44,8 @@ class Part03StepVerifier {
     // TODO Use StepVerifier to check that the flux parameter emits a User with "swhite" username and another one with "jpinkman" then completes successfully.
     fun expectSkylerJesseComplete(flux: Flux<User>) {
         flux.test()
-                .expectNextMatches({ u -> u.username == "swhite" })
-                .expectNextMatches({ u -> u.username == "jpinkman" })
+                .expectNextMatches({ it.username == "swhite" })
+                .expectNextMatches({ it.username == "jpinkman" })
                 .verifyComplete()
     }
 

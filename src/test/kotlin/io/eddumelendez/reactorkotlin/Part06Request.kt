@@ -77,7 +77,7 @@ class Part06Request {
     fun fluxWithDoOnPrintln(): Flux<User> {
         return repository.findAll()
                 .doOnSubscribe({ println("Starting:") })
-                .doOnNext({ p -> println(p.firstname + " " + p.lastname) })
+                .doOnNext({ println("${it.firstname} ${it.lastname}") })
                 .doOnComplete({ println("The End!") })
     }
 

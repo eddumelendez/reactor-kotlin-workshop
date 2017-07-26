@@ -57,7 +57,7 @@ class Part07Errors {
 
     // TODO Implement a method that capitalize each user of the incoming flux using the capitalizeUser() method and emit an error containing a GetOutOfHereException exception
     fun capitalizeMany(flux: Flux<User>): Flux<User> {
-        return flux.map({ user -> capitalizeUser(user) })
+        return flux.map({ capitalizeUser(it) })
     }
 
     @Throws(GetOutOfHereException::class)
