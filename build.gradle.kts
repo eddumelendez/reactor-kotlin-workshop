@@ -1,19 +1,8 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
-buildscript {
+plugins {
     val kotlinVersion = "1.1.3-2"
-    extra["kotlinVersion"] = kotlinVersion
-
-    repositories {
-        mavenCentral()
-    }
-    dependencies {
-        classpath(kotlinModule("gradle-plugin", kotlinVersion))
-    }
-}
-
-apply {
-    plugin("kotlin")
+    id("org.jetbrains.kotlin.jvm") version kotlinVersion
 }
 
 repositories {
@@ -29,10 +18,8 @@ tasks.withType<KotlinCompile> {
     }
 }
 
-val kotlinVersion = extra["kotlinVersion"] as String
-
 dependencies {
-    compile(kotlinModule("stdlib-jre8", kotlinVersion))
+    compile("org.jetbrains.kotlin:kotlin-stdlib-jre8")
     compile("io.projectreactor:reactor-core:3.1.0.M3")
     compile("io.reactivex.rxjava2:rxjava:2.0.5")
     testCompile("junit:junit:4.12")
