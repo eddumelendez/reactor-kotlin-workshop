@@ -58,7 +58,7 @@ class ReactiveUserRepository : ReactiveRepository<User> {
     }
 
     fun withDelay(userMono: Mono<User>) : Mono<User> {
-        return Mono.delay(Duration.ofMillis(delayInMs)).then(Supplier { userMono })
+        return Mono.delay(Duration.ofMillis(delayInMs)).flatMap({ userMono })
     }
 
     fun withDelay(userFlux: Flux<User>): Flux<User> {
