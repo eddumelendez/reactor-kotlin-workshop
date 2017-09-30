@@ -20,8 +20,8 @@ tasks.withType<KotlinCompile> {
 
 dependencies {
     compile("org.jetbrains.kotlin:kotlin-stdlib-jre8")
-    compile("io.projectreactor:reactor-core:3.1.0.M3")
+    compile("io.projectreactor:reactor-core:3.1.0.RELEASE")
     compile("io.reactivex.rxjava2:rxjava:2.0.5")
     testCompile("junit:junit:4.12")
-    testCompile("io.projectreactor:reactor-test:3.1.0.M3")
+    testCompile("io.projectreactor:reactor-test:3.1.0.RELEASE")
 }
