@@ -74,7 +74,7 @@ class Part08OtherOperations {
 
     // TODO return the flux which returns faster the first value
     fun useFastestFlux(flux1: Flux<User>, flux2: Flux<User>): Flux<User> {
-        return Flux.firstEmitting(flux1, flux2)
+        return Flux.first(flux1, flux2)
     }
 
     @Test
