@@ -3,6 +3,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 plugins {
     val kotlinVersion = "1.2.0"
     id("org.jetbrains.kotlin.jvm") version kotlinVersion
+    id("io.spring.dependency-management") version "1.0.4.RELEASE"
 }
 
 repositories {
@@ -18,10 +19,16 @@ tasks.withType<KotlinCompile> {
     }
 }
 
+dependencyManagement {
+    imports {
+        mavenBom("io.projectreactor:reactor-bom:Bismuth-SR5")
+    }
+}
+
 dependencies {
     compile("org.jetbrains.kotlin:kotlin-stdlib-jre8")
-    compile("io.projectreactor:reactor-core:3.1.2.RELEASE")
+    compile("io.projectreactor:reactor-core")
     compile("io.reactivex.rxjava2:rxjava:2.0.5")
     testCompile("junit:junit:4.12")
-    testCompile("io.projectreactor:reactor-test:3.1.2.RELEASE")
+    testCompile("io.projectreactor:reactor-test")
 }
