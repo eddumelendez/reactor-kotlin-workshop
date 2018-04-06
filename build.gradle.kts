@@ -21,7 +21,7 @@ tasks.withType<KotlinCompile> {
 
 dependencyManagement {
     imports {
-        mavenBom("io.projectreactor:reactor-bom:Bismuth-SR7")
+        mavenBom("io.projectreactor:reactor-bom:Bismuth-SR8")
     }
 }
 
