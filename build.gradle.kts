@@ -1,7 +1,7 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-    val kotlinVersion = "1.2.60"
+    val kotlinVersion = "1.3.10"
     id("org.jetbrains.kotlin.jvm") version kotlinVersion
     id("io.spring.dependency-management") version "1.0.4.RELEASE"
 }
@@ -21,12 +21,12 @@ tasks.withType<KotlinCompile> {
 
 dependencyManagement {
     imports {
-        mavenBom("io.projectreactor:reactor-bom:Bismuth-SR10")
+        mavenBom("io.projectreactor:reactor-bom:Californium-SR3")
     }
 }
 
 dependencies {
-    compile("org.jetbrains.kotlin:kotlin-stdlib-jre8")
+    compile("org.jetbrains.kotlin:kotlin-stdlib")
     compile("io.projectreactor:reactor-core")
     compile("io.reactivex.rxjava2:rxjava:2.0.5")
     testCompile("junit:junit:4.12")
