@@ -3,7 +3,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 plugins {
     val kotlinVersion = "1.3.21"
     id("org.jetbrains.kotlin.jvm") version kotlinVersion
-    id("io.spring.dependency-management") version "1.0.4.RELEASE"
+    id("io.spring.dependency-management") version "1.0.7.RELEASE"
 }
 
 repositories {
