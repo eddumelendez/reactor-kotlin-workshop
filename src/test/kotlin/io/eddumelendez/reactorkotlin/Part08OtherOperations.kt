@@ -97,13 +97,13 @@ class Part08OtherOperations {
                 .expectNext(User.SKYLER)
                 .verifyComplete()
 
-        mono = nullAwareUserToMono(null!!)
+        mono = nullAwareUserToMono(null)
         mono.test()
                 .verifyComplete()
     }
 
     // TODO Return a valid Mono of user for null input and non null input user (hint: Reactive Streams does not accept null values)
-    fun nullAwareUserToMono(user: User): Mono<User> {
+    fun nullAwareUserToMono(user: User?): Mono<User> {
         return null!!
     }
 
