@@ -21,7 +21,7 @@ tasks.withType<KotlinCompile> {
 
 dependencyManagement {
     imports {
-        mavenBom("io.projectreactor:reactor-bom:Californium-SR5")
+        mavenBom("io.projectreactor:reactor-bom:Californium-SR11")
     }
 }
 
