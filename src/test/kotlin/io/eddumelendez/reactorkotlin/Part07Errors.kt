@@ -4,9 +4,9 @@ import io.eddumelendez.reactorkotlin.domain.User
 import org.junit.Test
 import reactor.core.publisher.Flux
 import reactor.core.publisher.Mono
-import reactor.core.publisher.toFlux
-import reactor.core.publisher.toMono
-import reactor.test.test
+import reactor.kotlin.core.publisher.toFlux
+import reactor.kotlin.core.publisher.toMono
+import reactor.kotlin.test.test
 
 class Part07Errors {
 

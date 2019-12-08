@@ -21,13 +21,14 @@ tasks.withType<KotlinCompile> {
 
 dependencyManagement {
     imports {
-        mavenBom("io.projectreactor:reactor-bom:Californium-SR11")
+        mavenBom("io.projectreactor:reactor-bom:Dysprosium-SR2")
     }
 }
 
 dependencies {
     compile("org.jetbrains.kotlin:kotlin-stdlib")
     compile("io.projectreactor:reactor-core")
+    compile("io.projectreactor.kotlin:reactor-kotlin-extensions")
     compile("io.reactivex.rxjava2:rxjava:2.0.5")
     testCompile("junit:junit:4.12")
     testCompile("io.projectreactor:reactor-test")
