@@ -1,8 +1,7 @@
 package io.eddumelendez.reactorkotlin.repository
 
 import io.eddumelendez.reactorkotlin.domain.User
-import reactor.core.publisher.Mono
-import reactor.core.publisher.toMono
+import reactor.kotlin.core.publisher.toMono
 
 class BlockingUserRepository : BlockingRepository<User> {
 
