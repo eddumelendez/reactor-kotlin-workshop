@@ -5,7 +5,7 @@ import io.eddumelendez.reactorkotlin.repository.ReactiveUserRepository
 import org.junit.Test
 import reactor.core.publisher.Flux
 import reactor.core.publisher.Mono
-import reactor.test.test
+import reactor.kotlin.test.test
 
 class Part05Merge {
 

@@ -2,7 +2,7 @@ package io.eddumelendez.reactorkotlin
 
 import org.junit.Test
 import reactor.core.publisher.Flux
-import reactor.test.test
+import reactor.kotlin.test.test
 
 class Part01Flux {
 
