@@ -21,7 +21,7 @@ tasks.withType<KotlinCompile> {
 
 dependencyManagement {
     imports {
-        mavenBom("io.projectreactor:reactor-bom:Dysprosium-SR2")
+        mavenBom("io.projectreactor:reactor-bom:Dysprosium-SR6")
     }
 }
 
