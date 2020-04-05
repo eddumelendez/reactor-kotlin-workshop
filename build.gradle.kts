@@ -26,10 +26,10 @@ dependencyManagement {
 }
 
 dependencies {
-    compile("org.jetbrains.kotlin:kotlin-stdlib")
-    compile("io.projectreactor:reactor-core")
-    compile("io.projectreactor.kotlin:reactor-kotlin-extensions")
-    compile("io.reactivex.rxjava2:rxjava:2.0.5")
-    testCompile("junit:junit:4.12")
-    testCompile("io.projectreactor:reactor-test")
+    implementation("org.jetbrains.kotlin:kotlin-stdlib")
+    implementation("io.projectreactor:reactor-core")
+    implementation("io.projectreactor.kotlin:reactor-kotlin-extensions")
+    implementation("io.reactivex.rxjava2:rxjava:2.0.5")
+    testImplementation("junit:junit:4.12")
+    testImplementation("io.projectreactor:reactor-test")
 }
