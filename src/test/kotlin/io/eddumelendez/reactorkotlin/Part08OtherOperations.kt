@@ -52,7 +52,7 @@ class Part08OtherOperations {
 
     // TODO return the mono which returns faster its value
     fun useFastestMono(mono1: Mono<User>, mono2: Mono<User>): Mono<User> {
-        return Mono.first(mono1, mono2  )
+        return Mono.firstWithSignal(mono1, mono2)
     }
 
     @Test
@@ -74,7 +74,7 @@ class Part08OtherOperations {
 
     // TODO return the flux which returns faster the first value
     fun useFastestFlux(flux1: Flux<User>, flux2: Flux<User>): Flux<User> {
-        return Flux.first(flux1, flux2)
+        return Flux.firstWithSignal(flux1, flux2)
     }
 
     @Test
