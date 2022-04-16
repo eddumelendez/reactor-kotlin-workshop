@@ -23,7 +23,7 @@ class Part04Transform {
 
     // TODO Capitalize the user username, firstname and lastname
     fun capitalizeOne(mono: Mono<User>): Mono<User> {
-        return mono.map({ User(it.username.toUpperCase(), it.firstname?.toUpperCase(), it.lastname?.toUpperCase()) })
+        return mono.map({ User(it.username.uppercase(), it.firstname?.uppercase(), it.lastname?.uppercase()) })
     }
 
     @Test
@@ -41,7 +41,7 @@ class Part04Transform {
 
     // TODO Capitalize the users username, firstName and lastName
     fun capitalizeMany(flux: Flux<User>): Flux<User> {
-        return flux.map({ User(it.username.toUpperCase(), it.firstname?.toUpperCase(), it.lastname?.toUpperCase())})
+        return flux.map({ User(it.username.uppercase(), it.firstname?.uppercase(), it.lastname?.uppercase())})
     }
 
     @Test
@@ -63,7 +63,7 @@ class Part04Transform {
     }
 
     fun asyncCapitalizeUser(user: User): Mono<User> {
-        return User(user.username.toUpperCase(), user.firstname?.toUpperCase(), user.lastname?.toUpperCase()).toMono()
+        return User(user.username.uppercase(), user.firstname?.uppercase(), user.lastname?.uppercase()).toMono()
     }
 
 }
